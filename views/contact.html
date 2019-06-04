@@ -11,10 +11,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
-    <body> 
+    <body>
+        <div id="warning" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Please input your suggetion, thank you!</strong>
+                <button type="button" class="close" id="warning-close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+        </div>   
         <div id="success" class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Thank you!</strong>
-            <button type="button" class="close" id="close">
+            <button type="button" class="close" id="success-close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>    
@@ -44,7 +50,7 @@
                                             <span class="border-right-0">
                                                 <h4><label for="comment">Message:</label></h4>
                                             </span>
-                                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                                            <textarea class="form-control" rows="4" id="comment"></textarea>
                                         </div>
                                     </div>
                                     <button id="send" type="submit" class="btn btn-outline-secondary right">Submit</button>

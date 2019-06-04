@@ -18,11 +18,14 @@ div#email {
 }
 
 .right {
-    margin: 1%;
     position: absolute;
-    right:0;
+    right: 2%;
 }
 
 #success {
+    display: none;
+}
+
+#warning {
     display: none;
 }
