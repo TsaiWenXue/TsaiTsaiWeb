@@ -1,0 +1,28 @@
+div#message{
+    background-image: url('https://image.freepik.com/free-vector/blue-abstract-acrylic-brush-stroke-textured-background_53876-86373.jpg');
+    border-radius: 5%;
+}
+
+img#denny {
+    border-radius: 5%;
+    opacity: 0.8;
+}
+
+div#letter {
+    border-radius: 5%;
+    margin: 4%;
+}
+
+div#email {
+    margin: 2%;
+}
+
+.right {
+    margin: 1%;
+    position: absolute;
+    right:0;
+}
+
+#success {
+    display: none;
+}
