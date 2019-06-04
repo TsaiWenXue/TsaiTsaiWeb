@@ -1,8 +1,6 @@
 package main
 
 import (
-	"os"
-
 	"github.com/gin-gonic/gin"
 )
 
@@ -17,5 +15,9 @@ func main() {
 		c.HTML(200, "index.html", nil)
 	})
 
-	r.Run(":" + os.Getenv("PORT"))
+	r.GET("/contact", func(c *gin.Context) {
+		c.HTML(200, "contact.html", nil)
+	})
+
+	r.Run(":5000")
 }
