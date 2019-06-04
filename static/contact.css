@@ -10,16 +10,11 @@ img#denny {
 
 div#letter {
     border-radius: 5%;
-    margin: 2%;
+    margin: 4%;
 }
 
 div#email {
     margin: 2%;
-}
-
-.right {
-    position: absolute;
-    right: 2%;
 }
 
 #success {
