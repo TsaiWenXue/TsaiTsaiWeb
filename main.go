@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -15,5 +17,5 @@ func main() {
 		c.HTML(200, "index.html", nil)
 	})
 
-	r.Run(":3000")
+	r.Run(":" + os.Getenv("PORT"))
 }
