@@ -1,84 +1,145 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIFF Starter</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <title>Denny Tsai</title>
+    <link rel="stylesheet" href="../static/denny-tsai.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
 </head>
 
 <body>
-    <div class="buttongroup">
-        <div class="buttonrow">
-            <button id="openwindowbutton">Open Window</button>
-            <button id="closewindowbutton">Close Window</button>
+    <div id="back-img" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                <img id="denny" class="img-fluid" alt="denny-tsai" src="https://i.imgur.com/lN502aE.jpg" />
+                <h3 id="name">
+                    蔡汶學<br>
+                 (Denny Tsai)
+                </h3>
+            </div>
+            <div class="col-sm-6">
+                <div class="list-group list-group-horizontal" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action list-group-item-light active" id="list-info-list" data-toggle="list" href="#list-info" role="tab" aria-controls="info">Information</a>
+                        <a class="list-group-item list-group-item-action list-group-item-light" id="list-skill-list" data-toggle="list" href="#list-skill" role="tab" aria-controls="skill">Skills</a>
+                        <a class="list-group-item list-group-item-action list-group-item-light" id="list-exp-list" data-toggle="list" href="#list-exp" role="tab" aria-controls="exp">Experience</a>
+                    </div>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-info" role="tabpanel" aria-labelledby="list-info-list">
+                            <ul>
+                                <li class="list-item">
+                                    Come from <b>Yilan</b>
+                                </li>
+                                <li class="list-item">
+                                    Fourth year student of <b>National Taipei University of Technology </b>
+                                </li>
+                                <li class="list-item">
+                                    Major in Dept. of <b>Computer Science and Information Engineering</b> 
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="list-skill" role="tabpanel" aria-labelledby="list-skill-list">
+                            <ul>
+                                <li class="list-item">
+                                        Language: <b>Golang</b>, Python, JavaScript, C++, Java, HTML, CSS, SQL
+                                    </li>
+                                    <li class="list-item">
+                                        Basic concept of <b>Object-Oriented Programming and Design Pattern </b>
+                                    </li>
+                                    <li class="list-item">
+                                        Basic concept about <b>web development</b>, e.g., Server-Client side, Restful API, GRPC, HTTP, TCP/IP, FTP, SMTP.
+                                    </li>
+                                    <li class="list-item">
+                                        Usage of Git Flow version control
+                                    </li>
+                                    <li class="list-item">
+                                        The development process of <b>Scrum</b>
+                                    </li>
+                                    <li class="list-item">
+                                        Design and usage of Relational Database, e.g., MySQL
+                                    </li>
+                                    <li class="list-item">
+                                        Basic concept of NoSQL Database
+                                    </li>
+                                    <li class="list-item">
+                                        Basic concept of Information Security, Data Structure, and Algorithm
+                                    </li>
+                                    <li class="list-item">
+                                        Testing concept, e.g., unit test, regression test, automation test
+                                    </li>
+                                    <li class="list-item">
+                                        Usage of Docker, Redis
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="list-exp" role="tabpanel" aria-labelledby="list-exp-list">
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Line chat bot Experience
+                                        </button>
+                                    </h5>
+                                    </div>
+                                
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        This is first time I wrote a line chat bot. And the major problem I met is front end web design. Since I have develop back end for almost one year, I seldom write a front end web. Therefore, when I want to do a LIFF app that needs an web, I have no idea. Then, I try to use Vue.js to design my web. And I success deploy a Vue project to Heroku. But it takes me almost one day due to the version of node modules problems. And the deadline that I submit this bot is almost ther, I have no idea but to use Bootstrap to do my front end web. Although I can't use Vue.js to design my web, I still learn a lot from this experience e.g., deploy a node web server to Heroku. After the experience, I will try to learn more about front end web design and improve my back end skills at the same time.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-dark collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Back end Intern of Paradise-Soft company
+                                        </button>
+                                    </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                        In the company, I cooperate with another intern and four full-time engineers.  We use git flow to control our product version. In this team, I am a supporter. I participate the development of our company's product. As an back end developer, I develop Restful API for front end to use and concatenate third party api for our product, e.g., Aliyun mobile push api. Besides, I used to develop an account service for our app. Every time after I complete the code, there will be one or two other teammates review my code to check if there are any problems, or give some advice about detail of codes. During this process, I can realize the different thinking between every team member and the missing part of my thinking. I also am learner in our team. I can learn a lot from the other teammates, e.g., new technique, team communication. For me, it's a precious experience to be part of this team. In this company, I learn many software development skill, e.g., design patterns, redis, grpc. And also learn a new language Golang. The most important is that I realize I should be much strictly when coding. Not only for creating a good product but also having a good cooperate with team.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-dark collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            GeometrA project
+                                        </button>
+                                    </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                            GeomatrA is an open source automation testing tool that used in Android Apps. Testing engineers can write test case script to simulate human's action on screen, e.g., tap or slide.  The project is an Web-Desktop application that based on Electron and Flask as it's back end. This is my graduation project and I made it with three teammates. We run Scrum as our development process and the period of our Sprint is two weeks. In the end of a sprint, we'll have a sprint demo to professor and he'll express his idea about this demo. After the demo, My teammates and I will review this sprint and discuss new features about next sprint. Sometimes, we'll have pair programming that one man play a role as navigator and the other play as driver, then keep changing the role few minutes later. During the process of pair programming, we can communicate efficiently about the idea of code. In the project, I learned the process of Scrum and the concept of web-desktop application. Besides, I also got much familiar with Python and Javascript.
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingFour">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-dark collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            Internet Bookstore
+                                        </button>
+                                    </h5>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                    <div class="card-body">
+                                            Internet Bookstore is a simple web that sells books. It used Django as its back end and Bootstrap, Jquery and CSS as its front end. Besides, it used MySQL to store data. This is my first web project and I made it with other three teammates. I'm the team leader of the team and is responsible for the whole project design, the selection of programming language and framework, and the design of database. If I have proposal about our project, I will discuss with my teammates and analyze the pros and cons about the proposal. After debating, we'll decide to take the proposal or not. In this project, I learned the basic concept of developing web, e.g., server side, client side, web API. Besides, I also learned how to design a relational database schema and the concept of MVC and MTV. I also got the important experience of being a team leader.
+                                    </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                     </div>
+                </div>
+            </div>                
         </div>
-        <div class="buttonrow">
-            <button id="getaccesstoken">Get Access Token</button>
-            <button id="getprofilebutton">Get Profile</button>
-            <button id="sendmessagebutton">Send Message</button>
-        </div>
-    </div>
-
-    <div id="accesstokendata">
-        <h2>Access Token</h2>
-        <a href="#" onclick="toggleAccessToken()">Close Access Token</a>
-        <table border="1">
-            <tr>
-                <th>accessToken</th>
-                <td id="accesstokenfield"></td>
-            </tr>
-        </table>
-    </div>
-
-    <div id="profileinfo">
-        <h2>Profile</h2>
-        <a href="#" onclick="toggleProfileData()">Close Profile</a>
-        <div id="profilepicturediv">
-        </div>
-        <table border="1">
-            <tr>
-                <th>userId</th>
-                <td id="useridprofilefield"></td>
-            </tr>
-            <tr>
-                <th>displayName</th>
-                <td id="displaynamefield"></td>
-            </tr>
-            <tr>
-                <th>statusMessage</th>
-                <td id="statusmessagefield"></td>
-            </tr>
-        </table>
-    </div>
-
-    <div id="liffdata">
-        <h2>LIFF Data</h2>
-        <table border="1">
-            <tr>
-                <th>language</th>
-                <td id="languagefield"></td>
-            </tr>
-            <tr>
-                <th>context.viewType</th>
-                <td id="viewtypefield"></td>
-            </tr>
-            <tr>
-                <th>context.userId</th>
-                <td id="useridfield"></td>
-            </tr>
-            <tr>
-                <th>context.utouId</th>
-                <td id="utouidfield"></td>
-            </tr>
-            <tr>
-                <th>context.roomId</th>
-                <td id="roomidfield"></td>
-            </tr>
-            <tr>
-                <th>context.groupId</th>
-                <td id="groupidfield"></td>
-            </tr>
-        </table>
     </div>
     
-    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
-    <script src="../static/liff-starter.js"></script>
+    <script src="../static/denny-tsai.js"></script>
 </body>

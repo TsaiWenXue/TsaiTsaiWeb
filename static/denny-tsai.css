@@ -1,0 +1,13 @@
+#name {
+    text-align: center;
+}
+
+div#back-img {
+    background: url('https://image.freepik.com/free-vector/white-background-with-triangle-patterns_1017-18410.jpg');
+}
+
+img#denny {
+    border-radius: 5%;
+    align-content: center;
+    margin-top: 5%
+}
