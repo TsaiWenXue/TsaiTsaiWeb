@@ -1,6 +1,5 @@
 div#message{
     background-image: url('https://image.freepik.com/free-vector/blue-abstract-acrylic-brush-stroke-textured-background_53876-86373.jpg');
-    border-radius: 5%;
 }
 
 img#denny {
@@ -13,7 +12,8 @@ div#letter {
 }
 
 div#email {
-    margin: 2%;
+    margin-top: 5%;
+    margin-left: 5%;
 }
 
 #success {
