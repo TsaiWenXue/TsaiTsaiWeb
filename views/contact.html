@@ -12,54 +12,48 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="container-fluid">
+        <div id="warning" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Please input your suggetion, thank you!</strong>
+                <button type="button" class="close" id="warning-close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+        </div>   
+        <div id="success" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Thank you!</strong>
+            <button type="button" class="close" id="success-close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>    
+        <div id="message" class="container-fluid" style="margin-top:30px">
             <div class="row">
-                <div id="warning" class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <strong>Please input your suggetion, thank you!</strong>
-                        <button type="button" class="close" id="warning-close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                </div>   
-                <div id="success" class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>Thank you!</strong>
-                    <button type="button" class="close" id="success-close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>    
-                <div id="message" class="container" style="margin-top:30px">
+            <div class="col-sm-4">
+                <img id="denny" class="img-fluid" src="https://i.imgur.com/d9vR4Ba.jpg" alt="Denny">
+            </div>
+            <div class="col-sm-8">
+                <div class="container">
                     <div class="row">
-                    <div class="col-sm-4">
-                        <img id="denny" class="img-fluid" src="https://i.imgur.com/d9vR4Ba.jpg" alt="Denny">
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="container">
-                            <div class="row">
-                                    <div class="col">
-                                        <div id="email" class="position-relative">
-                                                <h5><i class="far fa-envelope"></i>Email:</h5>
-                                                <p class="text-primary">wto2005716@gmail.com</p>
-                                        </div>
-                                        <div id="letter" class="position-relative">
-                                                <h6>Hello~ I'm Denny Tsai. Thanks for visiting here. If you have any question or suggestion for me or my friend, Tsai Tsai. Please contact me with email or leave message below. Appreciate you sincerely!</h6>
-                                        </div>
-                                    </div>
+                            <div class="col">
+                                <div id="email" class="position-relative">
+                                        <h5><i class="far fa-envelope"></i>Email:</h5>
+                                        <p class="text-primary">wto2005716@gmail.com</p>
+                                </div>
+                                <div id="letter" class="position-relative">
+                                        <h6>Hello~ I'm Denny Tsai. Thanks for visiting here. If you have any question or suggestion for me or my friend, Tsai Tsai. Please contact me with email or leave message below. Appreciate you sincerely!</h6>
+                                </div>
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                        <form>
-                                            <div class="form-group">
-                                                <span class="border-right-0"></span>
-                                                    <button id="send" type="submit" class="btn btn-outline-secondary btn-sm">Message Submit</button>
-                                                </span>
-                                                <textarea class="form-control" rows="5" id="comment"></textarea>                      
-                                            </div>
-                                        </form>
-                                </div> 
-                            </div>
-                        </div>
                     </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <span class="border-right-0"></span>
+                                    <button id="send" type="submit" class="btn btn-outline-secondary btn-sm">Message Submit</button>
+                                </span>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>                      
+                            </div>
+                        </div> 
                     </div>
                 </div>
+            </div>
             </div>
         </div>
         <script src="../static/contact.js"></script>
